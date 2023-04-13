@@ -1,14 +1,19 @@
 import './style.css';
+import postData from './modules/dataAPI.js';
+import getData from './modules/getData.js';
+import render from './modules/render.js';
 
-function component() {
-  const element = document.createElement('div');
-
-  // Lodash, now imported by this script
-  // eslint-disable-next-line no-undef
-  element.innerHTML = _.join(['Hello', 'webpack'], ' ');
-  element.classList.add('hello');
-
-  return element;
-}
-
-document.body.appendChild(component());
+const form = document.querySelector('.score-form');
+const refresh = document.querySelector('#refresh_btn');
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  postData();
+  document.querySelector('#name').value = '';
+  document.querySelector('#score').value = '';
+});
+refresh.addEventListener('click', (e) => {
+  e.preventDefault();
+  getData();
+  render();
+});
+window.onload = render();
