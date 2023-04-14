@@ -4,10 +4,25 @@
   box-sizing: border-box;
 }
 
+body{
+  background-color: rgb(25, 91, 69);
+  border-radius: 15px;
+}
+
 .heading {
   font-size: 34px;
   padding-left: 5%;
   padding-top: 5%;
+}
+
+.heading h1 {
+  margin-left: 119px;
+  font-variant: small-caps;
+  font-size: 45px;
+}
+
+.heading h1 span{
+  color: #f57224;
 }
 
 .board_container {
@@ -16,6 +31,17 @@
   display: flex;
   justify-content: center;
   gap: 5%;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-top: 1px solid rgb(166, 160, 160);
+  border-radius: 15px;
+  box-shadow:
+    0 4px  4px  rgba(0, 0, 0, 0.1),
+    0 1px  6px  rgba(0, 0, 0, 0.05),
+    0 8px  8px  rgba(0, 0, 0, 0.1),
+    0 16px 16px rgba(0, 0, 0, 0.1),
+    8px 32px 32px rgba(0, 0, 0, 0.15),
+    8px 64px 64px rgba(0, 0, 0, 0.15);
 }
 
 .recent_scores {
@@ -33,13 +59,24 @@
   outline: none;
   cursor: pointer;
   box-shadow: 3px 6px 4px #222;
+  background: #f57224;
+  transition: .5s;
+}
+
+.scores button:hover {
+  background: #f57224;
+  color: white;
 }
 
 .scores_wrapper {
   width: 100%;
   margin-top: 20px;
-  border: 1px solid black;
+  background: transparent;
+  border: 2px solid black;
+  border-radius: 9px;
   padding: 4px;
+  backdrop-filter: blur(20px);
+  box-shadow: 0 0 30px rgba(1, 1, 1, .20);
 }
 
 .scores_wrapper li {
@@ -69,6 +106,7 @@ form {
   height: 40px;
   outline: none;
   padding: 0 5px;
+  background-color: transparent;
 }
 
 .score-form button {
@@ -78,4 +116,11 @@ form {
   outline: none;
   cursor: pointer;
   box-shadow: 3px 6px 4px #222;
+  transition: .5s;
+  background: #f57224;
+}
+
+.score-form button:hover {
+  background: #f57224;
+  color: white;
 }
