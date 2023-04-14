@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-body{
+body {
   background-color: rgb(25, 91, 69);
   border-radius: 15px;
 }
@@ -21,7 +21,7 @@ body{
   font-size: 45px;
 }
 
-.heading h1 span{
+.heading h1 span {
   color: #f57224;
 }
 
@@ -60,7 +60,23 @@ body{
   cursor: pointer;
   box-shadow: 3px 6px 4px #222;
   background: #f57224;
-  transition: .5s;
+  transition: 0.5s;
+}
+
+.score-form button {
+  width: 50%;
+  padding: 4px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 3px 6px 4px #222;
+  transition: 0.5s;
+  background: #f57224;
+}
+
+.score-form button:hover {
+  background: #f57224;
+  color: white;
 }
 
 .scores button:hover {
@@ -76,7 +92,7 @@ body{
   border-radius: 9px;
   padding: 4px;
   backdrop-filter: blur(20px);
-  box-shadow: 0 0 30px rgba(1, 1, 1, .20);
+  box-shadow: 0 0 30px rgba(1, 1, 1, 0.2);
 }
 
 .scores_wrapper li {
@@ -107,20 +123,4 @@ form {
   outline: none;
   padding: 0 5px;
   background-color: transparent;
-}
-
-.score-form button {
-  width: 50%;
-  padding: 4px;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  box-shadow: 3px 6px 4px #222;
-  transition: .5s;
-  background: #f57224;
-}
-
-.score-form button:hover {
-  background: #f57224;
-  color: white;
 }
